@@ -1,4 +1,4 @@
-function TodoItem({ todoName, todoDate, key, handleDelete }) {
+function TodoItem({ todoName, todoDate, id, handleDelete }) {
 
     // console.log(key);
     return (
@@ -10,7 +10,7 @@ function TodoItem({ todoName, todoDate, key, handleDelete }) {
             <button 
             type="button" 
             className="btn btn-danger kg-button"
-            onClick={()=>handleDelete(todoName)}
+            onClick={()=>handleDelete(id)}
             >
               Delete
             </button>

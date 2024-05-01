@@ -15,7 +15,8 @@ const TodoItems = ({ todoItems , handleDelete }) => {
         <TodoItem 
         todoDate={item.dueDate} 
         todoName={item.name}
-        Key={item.key}
+        key={item.key}
+        id={item.key}
         // todoid={item.key}
         handleDelete={handleDelete}
         >

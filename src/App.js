@@ -1,8 +1,5 @@
-// import AppName from "./components/AppName";
 import AppName from "./Component/AppName";
-// import AddTodo from "./components/AddTodo";
 import AddTodo from "./Component/AddTodo";
-// import TodoItems from "./components/TodoItems";
 import TodoItems from "./Component/TodoItems";
 import WellCome from "./Component/WellCome";
 
@@ -45,23 +42,19 @@ function App() {
     setTodoItems(newTodo);
   }
 
-  const handleDel = (key)=>
+  const handleDel = (id)=>
   {
-    // console.log(`key is ${key}`);
-    const newTodo = todoItems.filter(item=> item.name!==key);
+    const newTodo = todoItems.filter(item=> item.key!==id);
     setTodoItems(newTodo);
 
   }
 
-  // console.log(todoItems.length)
   return (
     <center className="todo-container">
       <AppName />
       <AddTodo  onNewItem={handleNewItem}/>
-      {/* <WellCome/> */}
       {todoItems.length === 0 && <WellCome></WellCome> }
       <TodoItems todoItems={todoItems} handleDelete={handleDel}></TodoItems>
-      {/* <TodoItems></TodoItems> */}
     </center>
   );
 }
